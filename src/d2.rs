@@ -2,12 +2,8 @@ pub fn solve() {
     let inp = include_str!("../input/d2.txt");
     let mut count1: i64 = 0;
     let mut count2: i64 = 0;
-    inp
-    .lines()
-    .for_each(|l| {
-        let lines: Vec<&str> = l
-            .split(' ')
-            .collect();
+    inp.lines().for_each(|l| {
+        let lines: Vec<&str> = l.split(' ').collect();
         let limits: Vec<usize> = lines[0]
             .split('-')
             .map(|el| el.parse::<usize>().unwrap())

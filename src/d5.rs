@@ -9,11 +9,11 @@ pub fn solve() {
                 match c {
                     'F' => r = m,
                     'B' => l = m + 1,
-                    _ => {},
+                    _ => {}
                 }
             }
             l <<= 3;
-            match &line[line.len()-3..] {
+            match &line[line.len() - 3..] {
                 "LLL" => l += 0,
                 "LLR" => l += 1,
                 "LRL" => l += 2,
@@ -22,20 +22,20 @@ pub fn solve() {
                 "RLR" => l += 5,
                 "RRL" => l += 6,
                 "RRR" => l += 7,
-                _ => {},
+                _ => {}
             }
             l
         })
         .collect();
 
-        seat_ids.sort();
-        println!("{}", seat_ids[seat_ids.len()-1]);
+    seat_ids.sort();
+    println!("{}", seat_ids[seat_ids.len() - 1]);
 
-        let min: usize = seat_ids[0];
-        for i in 0..seat_ids.len() {
-            if i + min != seat_ids[i] {
-                println!("{}", i + min);
-                break;
-            }
+    let min: usize = seat_ids[0];
+    for i in 0..seat_ids.len() {
+        if i + min != seat_ids[i] {
+            println!("{}", i + min);
+            break;
         }
+    }
 }

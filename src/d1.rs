@@ -14,17 +14,25 @@ pub fn solve() {
         }
     }
 
-    'cycle:
-    for i in 0..numbers.len() {
-        for j in i+1..numbers.len() {
+    'cycle: for i in 0..numbers.len() {
+        for j in i + 1..numbers.len() {
             let a = numbers[i];
             let b = numbers[j];
             let c = YEAR - a - b;
             if let Ok(_) = numbers.binary_search(&c) {
-                println!("{} + {} + {} = {}; {} * {} * {} = {}", a, b, c, YEAR, a, b, c, a * b * c);
+                println!(
+                    "{} + {} + {} = {}; {} * {} * {} = {}",
+                    a,
+                    b,
+                    c,
+                    YEAR,
+                    a,
+                    b,
+                    c,
+                    a * b * c
+                );
                 break 'cycle;
             }
         }
     }
-
 }
