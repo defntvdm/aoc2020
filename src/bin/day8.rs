@@ -63,7 +63,7 @@ fn main() {
         match commands[i].cmd {
             "jmp" => commands[i].cmd = "nop",
             "nop" => commands[i].cmd = "jmp",
-            _ => {},
+            _ => {}
         };
     }
 }

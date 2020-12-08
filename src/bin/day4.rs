@@ -5,7 +5,8 @@ struct Passport {
     cid: Option<i64>,
     pid: Option<String>,
     hgt: Option<String>,
-    hcl: Option<String>, ecl: Option<String>,
+    hcl: Option<String>,
+    ecl: Option<String>,
 }
 
 impl Passport {
