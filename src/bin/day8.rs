@@ -47,11 +47,11 @@ fn main() {
     println!("{}", acc);
 
     for i in 0..commands.len() {
-        if commands[i].cmd != "jmp" {
-            continue;
-        }
-
-        commands[i].cmd = "nop";
+        match commands[i].cmd {
+            "jmp" => commands[i].cmd = "nop",
+            "nop" => commands[i].cmd = "jmp",
+            _ => continue,
+        };
 
         let (acc, full) = execute(&commands);
         if full {
@@ -60,6 +60,10 @@ fn main() {
             return;
         }
 
-        commands[i].cmd = "jmp";
+        match commands[i].cmd {
+            "jmp" => commands[i].cmd = "nop",
+            "nop" => commands[i].cmd = "jmp",
+            _ => {},
+        };
     }
 }
