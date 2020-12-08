@@ -1,5 +1,5 @@
-use aoc::d7;
+use aoc::d8;
 
 fn main() {
-    d7::solve()
+    d8::solve()
 }
