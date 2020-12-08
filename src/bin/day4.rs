@@ -5,8 +5,7 @@ struct Passport {
     cid: Option<i64>,
     pid: Option<String>,
     hgt: Option<String>,
-    hcl: Option<String>,
-    ecl: Option<String>,
+    hcl: Option<String>, ecl: Option<String>,
 }
 
 impl Passport {
@@ -178,8 +177,8 @@ impl Passport {
     }
 }
 
-pub fn solve() {
-    let inp = include_str!("../input/d4.txt");
+fn main() {
+    let inp = include_str!("../../input/d4.txt");
     let mut passports: Vec<Passport> = Vec::new();
     let mut passport = Passport::new();
     inp.lines().for_each(|line| {

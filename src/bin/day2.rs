@@ -1,5 +1,5 @@
-pub fn solve() {
-    let inp = include_str!("../input/d2.txt");
+fn main() {
+    let inp = include_str!("../../input/d2.txt");
     let mut count1: i64 = 0;
     let mut count2: i64 = 0;
     inp.lines().for_each(|l| {

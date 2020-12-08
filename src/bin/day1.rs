@@ -1,7 +1,7 @@
 const YEAR: i64 = 2020;
 
-pub fn solve() {
-    let mut numbers: Vec<i64> = include_str!("../input/d1.txt")
+fn main() {
+    let mut numbers: Vec<i64> = include_str!("../../input/d1.txt")
         .lines()
         .map(|a| a.parse::<i64>().unwrap())
         .collect();

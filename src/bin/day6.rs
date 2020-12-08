@@ -1,13 +1,13 @@
 use std::collections::HashSet;
 
-pub fn solve() {
+fn main() {
     let mut questions1: HashSet<char> = HashSet::new();
     let mut acc: HashSet<char> = HashSet::new();
     let mut count1 = 0;
     let mut count2 = 0;
 
     let mut first_person = true;
-    include_str!("../input/d6.txt").lines().for_each(|line| {
+    include_str!("../../input/d6.txt").lines().for_each(|line| {
         if line == "" {
             count1 += questions1.len();
             count2 += acc.len();

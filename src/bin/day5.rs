@@ -1,5 +1,5 @@
-pub fn solve() {
-    let lines = include_str!("../input/d5.txt").lines();
+fn main() {
+    let lines = include_str!("../../input/d5.txt").lines();
     let mut seat_ids: Vec<usize> = lines
         .map(|line| {
             let mut l = 0;

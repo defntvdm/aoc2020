@@ -29,8 +29,8 @@ fn execute(commands: &Vec<Command>) -> (i64, bool) {
     (acc, current_op == commands.len() as i64)
 }
 
-pub fn solve() {
-    let mut commands: Vec<Command> = include_str!("../input/d8.txt")
+fn main() {
+    let mut commands: Vec<Command> = include_str!("../../input/d8.txt")
         .lines()
         .map(|el| {
             let parts: Vec<&str> = el.trim().split(' ').collect();

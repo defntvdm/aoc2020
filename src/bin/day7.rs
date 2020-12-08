@@ -1,7 +1,7 @@
 use std::collections::{HashMap, HashSet};
 
-pub fn solve() {
-    let lines = include_str!("../input/d7.txt").lines();
+fn main() {
+    let lines = include_str!("../../input/d7.txt").lines();
     let mut graphc: HashMap<String, Vec<String>> = HashMap::new();
     let mut graphp: HashMap<String, Vec<(i64, String)>> = HashMap::new();
     lines.for_each(|line| {
