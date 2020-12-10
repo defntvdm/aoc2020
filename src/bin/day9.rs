@@ -28,7 +28,7 @@ fn main() {
             res = inp[k];
             break;
         }
-        window.remove(&inp[k-25]);
+        window.remove(&inp[k - 25]);
         window.insert(inp[k]);
     }
 
@@ -47,5 +47,8 @@ fn main() {
         }
     }
     let res_slice = &inp[l..=r];
-    println!("{}", res_slice.iter().min().unwrap() + res_slice.iter().max().unwrap());
+    println!(
+        "{}",
+        res_slice.iter().min().unwrap() + res_slice.iter().max().unwrap()
+    );
 }
