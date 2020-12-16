@@ -5,6 +5,10 @@ authors = ["Vadim Nikolaev <defntvdm@gmail.com>"]
 edition = "2018"
 
 [[bin]]
+name = "day11"
+src = "src/bin/day11.rs"
+
+[[bin]]
 name = "day10"
 src = "src/bin/day10.rs"
 
